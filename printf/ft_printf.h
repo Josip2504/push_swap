@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsamardz <jsamardz@student.42heilnronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 11:46:45 by jsamardz          #+#    #+#             */
-/*   Updated: 2024/04/30 13:18:15 by jsamardz         ###   ########.fr       */
+/*   Created: 2024/03/18 14:34:01 by jsamardz          #+#    #+#             */
+/*   Updated: 2024/03/22 12:43:30 by jsamardz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-# include "libft/libft.h"
-# include "printf/ft_printf.h"
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdarg.h>
+# include <stdio.h>
 
-typedef struct s_stack
-{
-	int				value;
-	int				index;
-	struct s_stack	*next;
-	struct s_stack	*prev;
-}	t_stack;
-
-void	ft_input(int ac, char **av);
-int		ft_duplicate(int i, char **res, int temp);
-
+int		ft_printf(const char *format, ...);
+int		print_format(char spec, va_list ap);
+int		print_char(int c);
+int		print_str(char *str);
+int		print_digit(long n, int base);
+int		print_x(long n, int base);
+int		print_ptr(unsigned long ptr, int base);
 
 #endif

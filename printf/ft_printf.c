@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsamardz <jsamardz@student.42heilnronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 11:46:45 by jsamardz          #+#    #+#             */
-/*   Updated: 2024/04/30 13:18:15 by jsamardz         ###   ########.fr       */
+/*   Created: 2024/03/18 12:25:39 by jsamardz          #+#    #+#             */
+/*   Updated: 2024/03/21 14:39:52 by jsamardz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "ft_printf.h"
 
-# include "libft/libft.h"
-# include "printf/ft_printf.h"
-
-typedef struct s_stack
+int	ft_printf(const char *format, ...)
 {
-	int				value;
-	int				index;
-	struct s_stack	*next;
-	struct s_stack	*prev;
-}	t_stack;
+	va_list	ap;
+	int		count;
 
-void	ft_input(int ac, char **av);
-int		ft_duplicate(int i, char **res, int temp);
-
-
-#endif
+	count = 0;
+	va_start(ap, format);
+	while (*format)
+	{
+		if (*format == '%')
+		{
+			count += print_format(*(++format), ap);
+			if (count < 0)
+				return (-1);
+		}
+		else
+		{
+			count += print_char(*format);
+			if (count < 0)
+				return (-1);
+		}
+		++format;
+	}
+	va_end(ap);
+	return (count);
+}

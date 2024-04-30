@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   print_str.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsamardz <jsamardz@student.42heilnronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 11:46:45 by jsamardz          #+#    #+#             */
-/*   Updated: 2024/04/30 13:18:15 by jsamardz         ###   ########.fr       */
+/*   Created: 2024/03/18 15:12:22 by jsamardz          #+#    #+#             */
+/*   Updated: 2024/03/21 15:47:46 by jsamardz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "ft_printf.h"
 
-# include "libft/libft.h"
-# include "printf/ft_printf.h"
-
-typedef struct s_stack
+int	print_str(char *str)
 {
-	int				value;
-	int				index;
-	struct s_stack	*next;
-	struct s_stack	*prev;
-}	t_stack;
+	int	count;
 
-void	ft_input(int ac, char **av);
-int		ft_duplicate(int i, char **res, int temp);
-
-
-#endif
+	count = 0;
+	if (str == NULL)
+	{
+		return (write (1, "(null)", 6));
+	}
+	if (!str)
+		return (-1);
+	while (*str)
+	{
+		count += print_char((int)*str);
+		if (count < 0)
+			return (-1);
+		++str;
+	}
+	return (count);
+}

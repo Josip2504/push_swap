@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsamardz <jsamardz@student.42heilnronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 11:46:45 by jsamardz          #+#    #+#             */
-/*   Updated: 2024/04/30 13:18:15 by jsamardz         ###   ########.fr       */
+/*   Created: 2024/04/30 10:50:03 by jsamardz          #+#    #+#             */
+/*   Updated: 2024/04/30 13:19:19 by jsamardz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include "libft/libft.h"
-# include "printf/ft_printf.h"
+// int	main(int ac, char **av)
+// {
+// 	t_stack *stack_a;
+// 	t_stack *stack_b;
 
-typedef struct s_stack
-{
-	int				value;
-	int				index;
-	struct s_stack	*next;
-	struct s_stack	*prev;
-}	t_stack;
+// 	stack_a = NULL;
+// 	stack_b = NULL;
+// 	if (ac < 2)
+// 		return (-1);
+// 	ft_input(ac, av);
+// }
 
-void	ft_input(int ac, char **av);
-int		ft_duplicate(int i, char **res, int temp);
+int main(int argc, char **argv) {
+    if (argc < 2) {
+        ft_printf("Usage: %s <input_string>\n", argv[0]);
+        return 1;
+    }
 
-
-#endif
+    ft_input(argc, argv);
+    return 0;
+}

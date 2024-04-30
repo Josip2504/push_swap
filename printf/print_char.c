@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   print_char.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsamardz <jsamardz@student.42heilnronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 11:46:45 by jsamardz          #+#    #+#             */
-/*   Updated: 2024/04/30 13:18:15 by jsamardz         ###   ########.fr       */
+/*   Created: 2024/03/18 15:10:54 by jsamardz          #+#    #+#             */
+/*   Updated: 2024/03/22 11:22:54 by jsamardz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "ft_printf.h"
 
-# include "libft/libft.h"
-# include "printf/ft_printf.h"
-
-typedef struct s_stack
+int	print_char(int c)
 {
-	int				value;
-	int				index;
-	struct s_stack	*next;
-	struct s_stack	*prev;
-}	t_stack;
-
-void	ft_input(int ac, char **av);
-int		ft_duplicate(int i, char **res, int temp);
-
-
-#endif
+	return (write(1, &c, 1));
+}

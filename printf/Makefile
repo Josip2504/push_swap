@@ -5,43 +5,31 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jsamardz <jsamardz@student.42heilnronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/29 11:39:03 by jsamardz          #+#    #+#              #
-#    Updated: 2024/04/30 13:17:42 by jsamardz         ###   ########.fr        #
+#    Created: 2024/03/18 12:16:43 by jsamardz          #+#    #+#              #
+#    Updated: 2024/04/30 13:42:17 by jsamardz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CFALGS = -Wall -Werror -Wextra
-SRC = main.c ft_input.c
+CFLAGS = -Wall -Werror -Wextra
+SRC = ft_printf.c print_format.c print_char.c print_str.c print_digit.c print_x.c \
+print_ptr.c
 OBJ = $(SRC:.c=.o)
-NAME = push_swap
-RM = rm -f
+NAME = libftprintf.a
 
 all: $(NAME)
 
-%.o: %.cc
-	@cc $(CFALGS) -Ilibft -Iprintf -c $? -o $@
-
 $(NAME): $(OBJ)
-	@make -C libft
-	@make -C printf
-	@cc $(CFALGS) $^ -Llibft -lft -Lprintf -lftprintf -o $@
+	@ar rcs $(NAME) $(OBJ)
 
-libft:
-	@make -C libft
-
-printf:
-	@make -C printf
+%.o: %.cc
+	@cc $(CFLAGS) -c $< -o $@ 
 
 clean:
-	@echo "clean"
-	@make clean -C libft
-	@make clean -C printf
-	@$(RM) $(OBJ)
+	@rm -f $(OBJ)
 
 fclean:
-	@echo "fclean"
-	@$(RM) push_swap
+	@rm -f $(OBJ)
+	@rm -f $(NAME)
 
 re: fclean all
-
-.PHONY: libft printf
+.PHONY: all clean fclean re
