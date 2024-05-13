@@ -6,7 +6,7 @@
 /*   By: jsamardz <jsamardz@student.42heilnronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/09 12:37:09 by jsamardz          #+#    #+#             */
-/*   Updated: 2024/05/10 14:50:50 by jsamardz         ###   ########.fr       */
+/*   Updated: 2024/05/13 13:54:06 by jsamardz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void	ft_algorithm(t_stack **stack_a, t_stack **stack_b)
 {
 	push_unitl_three(stack_a, stack_b);
 	sort_three(stack_a);
-	while(*stack_b)          // infinite loop error
+	while(*stack_b)
 	{
 		get_target_pos(stack_a, stack_b);
 		cost(stack_a, stack_b);
