@@ -6,7 +6,7 @@
 /*   By: jsamardz <jsamardz@student.42heilnronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 11:44:52 by jsamardz          #+#    #+#             */
-/*   Updated: 2024/05/19 14:44:59 by jsamardz         ###   ########.fr       */
+/*   Updated: 2024/05/19 15:38:37 by jsamardz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static long	ft_atol(const char *str)
 {
-	int	i;
+	int		i;
 	long	m;
 	long	num;
 

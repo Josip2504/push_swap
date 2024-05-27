@@ -6,7 +6,7 @@
 /*   By: jsamardz <jsamardz@student.42heilnronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 11:54:27 by jsamardz          #+#    #+#             */
-/*   Updated: 2024/05/19 14:46:22 by jsamardz         ###   ########.fr       */
+/*   Updated: 2024/05/27 14:32:27 by jsamardz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ t_stack	*fill_stack(int ac, char **av)
 	int		num;
 	char	**numbers;
 
-	num = 0;
+	stack_a = NULL;
 	i = 0;
 	if (ac == 2)
 		numbers = ft_split(av[1], 32);
@@ -101,5 +101,6 @@ t_stack	*fill_stack(int ac, char **av)
 			add_to_bottom(new_stack(num), &stack_a);
 		i++;
 	}
+	ft_free_num(ac, numbers);
 	return (stack_a);
 }

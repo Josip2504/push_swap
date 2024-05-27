@@ -6,7 +6,7 @@
 /*   By: jsamardz <jsamardz@student.42heilnronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:50:03 by jsamardz          #+#    #+#             */
-/*   Updated: 2024/05/19 14:39:36 by jsamardz         ###   ########.fr       */
+/*   Updated: 2024/05/27 15:42:30 by jsamardz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(int ac, char **av)
 	stack_a = NULL;
 	stack_b = NULL;
 	if (ac < 2)
-		return (-1);
+		return (0);
 	stack_a = fill_stack(ac, av);
 	size_stack = stack_size(stack_a);
 	stack_id(stack_a, size_stack + 1);

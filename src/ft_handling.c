@@ -6,7 +6,7 @@
 /*   By: jsamardz <jsamardz@student.42heilnronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 11:34:08 by jsamardz          #+#    #+#             */
-/*   Updated: 2024/05/19 14:04:51 by jsamardz         ###   ########.fr       */
+/*   Updated: 2024/05/27 14:18:51 by jsamardz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@ void	ft_free(char **str)
 
 	i = 0;
 	while (str[i])
-		i++;
-	while (i >= 0)
-		free(str[i--]);
+		free(str[i++]);
+	free(str);
 }
 
 void	ft_error(char *str)
