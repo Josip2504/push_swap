@@ -6,7 +6,7 @@
 /*   By: jsamardz <jsamardz@student.42heilnronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 11:34:08 by jsamardz          #+#    #+#             */
-/*   Updated: 2024/05/17 12:50:04 by jsamardz         ###   ########.fr       */
+/*   Updated: 2024/05/19 14:04:51 by jsamardz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_free(char **str)
 void	ft_error(char *str)
 {
 	ft_printf("%s", str);
-	exit(0);
+	exit(EXIT_FAILURE);
 }
 
 void	free_stack(t_stack **stack)
