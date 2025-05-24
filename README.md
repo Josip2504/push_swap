@@ -30,7 +30,7 @@ git clone https://github.com/yourusername/push_swap.git
 cd push_swap
 ```
 	
--   ****Build the project**:
+-   **Build the project**:
 
 ```bash
 make
@@ -104,11 +104,3 @@ ARG="4 67 3 87 23"
     
 -   Implement robust error checking
     
-
-## 🙏 Acknowledgments
-
--   42 School for the challenge and evaluation process
-    
--   The developers of GNU Make and the C standard library
-    
--   Your peers and community testers
