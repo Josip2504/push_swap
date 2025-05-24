@@ -3,11 +3,11 @@
 A high-performance stack sorting algorithm using limited operations. Developed as part of the 42 School curriculum.
 
 
-## 📋 Overview
+##  Overview
 
 `push_swap` is a sorting algorithm challenge designed to sort a stack of integers using a limited set of instructions with the fewest moves possible. It requires implementing efficient algorithms in C and understanding algorithmic complexity and optimization.
 
-## 🚀 Features
+##  Features
 
 -   Input parsing and error handling
     
@@ -21,7 +21,7 @@ A high-performance stack sorting algorithm using limited operations. Developed a
     
 -   Bonus: Interactive `checker` program to validate instruction sequences
 
-## ⚙️ Installation
+##  Installation
 
 -   **Clone the repository**:
     
@@ -36,7 +36,7 @@ cd push_swap
 make
 ```
 
-## 📌 Usage
+##  Usage
 
 **Sorting Example**
 ```bash
@@ -64,7 +64,7 @@ ARG="4 67 3 87 23"
 ./push_swap $ARG | ./checker $ARG  # Validate correctness
 ```
 
-## 📐 Project Requirements
+##  Project Requirements
 
 ### Mandatory
 
@@ -77,7 +77,7 @@ ARG="4 67 3 87 23"
 -   No output if no arguments are passed
 
 
-## 🧠 Learning Objectives
+##  Learning Objectives
 
 -   Understand and implement sorting algorithms
     
