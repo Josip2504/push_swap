@@ -26,14 +26,14 @@ A high-performance stack sorting algorithm using limited operations. Developed a
 -   **Clone the repository**:
     
 ```bash
-	git clone https://github.com/yourusername/push_swap.git
-	cd push_swap
+git clone https://github.com/yourusername/push_swap.git
+cd push_swap
 ```
 	
 -   ****Build the project**:
 
 ```bash
-	make
+make
 ```
 
 ## 📌 Usage
@@ -63,3 +63,52 @@ ARG="4 67 3 87 23"
 ./push_swap $ARG | wc -l  # Check number of operations
 ./push_swap $ARG | ./checker $ARG  # Validate correctness
 ```
+
+## 📐 Project Requirements
+
+### Mandatory
+
+-   Sort stack `a` using the fewest number of operations
+    
+-   Display only the sequence of instructions
+    
+-   Handle errors: invalid input, duplicates, non-integers, etc.
+    
+-   No output if no arguments are passed
+
+
+## 📦 Project Structure
+
+```bash
+.
+├── includes/         # Header files
+├── srcs/             # Source files
+│   ├── algorithm/    # Sorting logic
+│   ├── stack/        # Stack operations
+│   ├── utils/        # Parsing and validation
+│   ├── checker/      # Bonus checker
+├── libft/            # Custom standard library (libft)
+├── Makefile          # Build system
+└── README.md         # Project documentation
+```
+
+## 🧠 Learning Objectives
+
+-   Understand and implement sorting algorithms
+    
+-   Optimize for time and space complexity
+    
+-   Manage memory correctly in C
+    
+-   Follow strict coding norms
+    
+-   Implement robust error checking
+    
+
+## 🙏 Acknowledgments
+
+-   42 School for the challenge and evaluation process
+    
+-   The developers of GNU Make and the C standard library
+    
+-   Your peers and community testers
