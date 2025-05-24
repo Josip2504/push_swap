@@ -77,21 +77,6 @@ ARG="4 67 3 87 23"
 -   No output if no arguments are passed
 
 
-## 📦 Project Structure
-
-```bash
-.
-├── includes/         # Header files
-├── srcs/             # Source files
-│   ├── algorithm/    # Sorting logic
-│   ├── stack/        # Stack operations
-│   ├── utils/        # Parsing and validation
-│   ├── checker/      # Bonus checker
-├── libft/            # Custom standard library (libft)
-├── Makefile          # Build system
-└── README.md         # Project documentation
-```
-
 ## 🧠 Learning Objectives
 
 -   Understand and implement sorting algorithms
